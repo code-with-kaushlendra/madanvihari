@@ -1,0 +1,179 @@
+body.login-body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #6dd5fa, #2980b9);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 380px;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.title {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+.input-box label {
+  position: absolute;
+  left: 40px;
+  top: 12px;
+  color: #000;
+  transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #000;
+}
+
+.input-box i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 18px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 114, 255, 0.6);
+}
+
+/* Container */
+
+.dash-welcome-box {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Typing + Glow Text */
+
+.dash-typing-glow {
+  font-size: 40px;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #2563eb;
+  width: 0;
+  margin: auto;
+
+  animation:
+    dashTyping 4s steps(35, end) forwards,
+    dashCursor 0.7s infinite,
+    dashGlow 2s ease-in-out infinite alternate;
+}
+
+/* Doctor Name */
+
+.dash-doctor-name {
+  color: #2563eb;
+}
+
+/* Typing Animation */
+
+@keyframes dashTyping {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor Blink */
+
+@keyframes dashCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Glow Effect */
+
+@keyframes dashGlow {
+  from {
+    text-shadow:
+      0 0 5px #3b82f6,
+      0 0 10px #3b82f6,
+      0 0 20px #3b82f6;
+  }
+
+  to {
+    text-shadow:
+      0 0 10px #60a5fa,
+      0 0 20px #60a5fa,
+      0 0 30px #60a5fa;
+  }
+}
+
+/* Hover Rotate Effect */
+
+.dash-typing-glow:hover {
+  /* transform:rotate(-3deg) scale(1.05); */
+  transition: 0.3s;
+  cursor: pointer;
+}
